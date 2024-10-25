@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Vlogs</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Vlogs</h1>
+        <p>Davy de vlogger</p>
+    </header>
+
+    <section class="vlog-gallery">
+       
+        <div class="vlog-card" data-scroll="right">
+            <a href="https://youtu.be/0u7juCgj_qs" target="_blank">
+                <img src="images/vlog6.jpg" alt="Vlog 6 Thumbnail" class="thumbnail">
+                <h2 class="vlog-title"> IK TESTTE DE SLECHTSTE VLIEGMAATSCHAPPIJ! </h2>
+            </a>
+        </div>
+        
+        <div class="vlog-card" data-scroll="left">
+            <a href="https://www.youtube.com/watch?v=vPzYtcFgx7E" target="_blank">
+                <img src="images/vlog5.jpg" alt="Vlog 2 Thumbnail" class="thumbnail">
+                <h2 class="vlog-title">IK GA VOOR HET EERST SNOWBOARDEN!!</h2>
+            </a>
+        </div>
+
+        <div class="vlog-card" data-scroll="right">
+            <a href="https://youtu.be/gI4XldwZo4k" target="_blank">
+                <img src="images/vlog4.jpg" alt="Vlog 3 Thumbnail" class="thumbnail">
+                <h2 class="vlog-title">IK TEST DE BESTE TURKSE SNACKS!</h2>
+            </a>
+        </div>
+
+        <div class="vlog-card" data-scroll="right">
+            <a href="https://youtu.be/4_kyTjbn6ZM" target="_blank">
+                <img src="images/vlog3.jpg" alt="Vlog 4 Thumbnail" class="thumbnail">
+                <h2 class="vlog-title">IK TESTTE DE SLECHTSTE DRIVE-THROUGHS VAN NEDERLAND!</h2>
+            </a>
+        </div>
+
+        <div class="vlog-card" data-scroll="left">
+            <a href="https://youtu.be/mUVoXbm-2Vs" target="_blank">
+                <img src="images/vlog2.jpg" alt="Vlog 5 Thumbnail" class="thumbnail">
+                <h2 class="vlog-title">IK TESTTE DE BESTE BALKAN SNACKS</h2>
+            </a>
+        </div>
+
+        
+
+        <div class="vlog-card" data-scroll="left">
+            <a href="https://youtu.be/vwiEb1kOIWk" target="_blank">
+                <img src="images/vlog1.jpg" alt="Vlog 1 Thumbnail" class="thumbnail">
+                <h2 class="vlog-title">IK BEN VERGIFTIGD!</h2>
+            </a>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    const cards = document.querySelectorAll(".vlog-card");
+
+    function scrollAnimation() {
+        cards.forEach(card => {
+            const cardPosition = card.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.3;
+
+            if (cardPosition < screenPosition) {
+                card.style.opacity = '1';
+                card.style.transform = card.dataset.scroll === "left" 
+                    ? 'translateX(0)' 
+                    : 'translateX(0)';
+            }
+        });
+    }
+
+    window.addEventListener("scroll", scrollAnimation);
+    scrollAnimation(); // Initial call for elements in view on load
+});
+
+    </script>
+</body>
+</html>
