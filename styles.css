@@ -8,7 +8,7 @@
 
 /* Dark background with green gradient */
 body {
-    background: linear-gradient(135deg, #001f1f, #003333);
+    background: linear-gradient(135deg, #51068f, #4a037a);
     color: #e0ffe0;
     display: flex;
     flex-direction: column;
@@ -20,7 +20,7 @@ body {
 .header {
     text-align: center;
     padding: 40px 20px;
-    color: #afffaf;
+    color: #ffffff;
 }
 
 .header h1 {
@@ -47,14 +47,14 @@ body {
 
 /* Glassmorphic dark card style */
 .vlog-card {
-    background: rgba(0, 80, 0, 0.2); /* Dark greenish glassmorphic effect */
+    background: rgba(255, 255, 255, 0.2); /* Dark greenish glassmorphic effect */
     border-radius: 12px;
     overflow: hidden;
     width: 100%;
     max-width: 280px;
     backdrop-filter: blur(15px);
-    border: 1px solid rgba(0, 255, 0, 0.2);
-    box-shadow: 0 8px 32px rgba(0, 100, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(255, 255, 255, 0.4);
     transition: transform 0.3s ease;
     opacity: 0;
     transform: translateY(30px);
@@ -68,12 +68,12 @@ body {
 }
 
 .vlog-card:hover a {
-    color: #afffaf;
+    color: #ffffff;
 }
 
 .vlog-card:hover {
     transform: translateY(-10px);
-    border-color: rgba(0, 255, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.4);
 }
 
 .thumbnail {
@@ -86,7 +86,7 @@ body {
     padding: 15px;
     text-align: center;
     font-size: 1.3em;
-    color: #afffaf;
+    color: #ffffff;
 }
 
 /* Mobile responsiveness */
